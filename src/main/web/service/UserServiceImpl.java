@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+
 import web.dao.UserDao;
 import web.model.User;
 
@@ -35,7 +36,6 @@ public class UserServiceImpl implements UserService {
     @Transactional(readOnly = true)
     @Override
     public User getUser(Long id) {
-
         return userDao.getUser(id);
     }
 
@@ -43,7 +43,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public void editUser(Long id, User user) {
 
-        userDao.editUser(id, user);
+        userDao.editUser(user);
     }
 
     @Transactional
