@@ -42,7 +42,7 @@ public class UserDaoImpl implements UserDao {
 
         User edit = entityManager.find(User.class, id);
         edit.setName(user.getName());
-        edit.setSecond_name(user.getSurname());
+        edit.setSurname(user.getSurname());
         edit.setAge(user.getAge());
         edit.setEmail(user.getEmail());
     }
